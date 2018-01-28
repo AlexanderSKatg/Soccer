@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.sk4atg89.alexander.soccer.domain.common.model.ChampionLeagueStandingEntity" />
+
+        <variable
+            name="event"
+            type="com.sk4atg89.alexander.soccer.presentation.table.champion_league.ChampionLeagueContract.EventListener" />
+
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:onClick="@{() -> event.openClub(item.teamId)}">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@null"
+            bind:image="@{item.crestURI}"
+            tools:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="8dp"
+            android:background="@color/colorGrayBackground"
+            android:padding="4dp"
+            android:text="@{item.team}"
+            android:textColor="@color/colorWhiteText"
+            android:textStyle="bold"
+            tools:text="Roma" />
+
+    </FrameLayout>
+</layout>

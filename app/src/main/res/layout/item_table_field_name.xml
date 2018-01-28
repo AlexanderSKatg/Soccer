@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/position"
+            style="@style/TextViewItemTable"
+            android:background="@color/colorBlackBackground"
+            android:text="@string/team_position" />
+
+        <TextView
+            android:id="@+id/teamName"
+            style="@style/TextViewItemTable"
+            android:layout_toEndOf="@id/position"
+            android:layout_toLeftOf="@id/llTableContainer"
+            android:layout_toRightOf="@id/position"
+            android:layout_toStartOf="@id/llTableContainer"
+            android:background="@color/colorBlackBackground"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="@string/team_name" />
+
+
+        <LinearLayout
+            android:id="@+id/llTableContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/playedGames"
+                style="@style/TextViewItemTable"
+                android:background="@color/colorBlackBackground"
+                android:text="@string/played_matches" />
+
+            <TextView
+                android:id="@+id/wins"
+                style="@style/TextViewItemTable"
+                android:background="@color/colorBlackBackground"
+                android:text="@string/win_matches" />
+
+            <TextView
+                android:id="@+id/draws"
+                style="@style/TextViewItemTable"
+                android:background="@color/colorBlackBackground"
+                android:text="@string/draw_matches" />
+
+            <TextView
+                android:id="@+id/losses"
+                style="@style/TextViewItemTable"
+                android:background="@color/colorBlackBackground"
+                android:text="@string/lose_matches" />
+
+            <TextView
+                android:id="@+id/goals"
+                style="@style/TextViewItemTable"
+                android:background="@color/colorBlackBackground"
+                android:text="@string/goals_in_matches" />
+
+            <TextView
+                android:id="@+id/goalsAgainst"
+                style="@style/TextViewItemTable"
+                android:background="@color/colorBlackBackground"
+                android:text="@string/goals_against" />
+
+            <TextView
+                android:id="@+id/goalDifference"
+                style="@style/TextViewItemTable"
+                android:background="@color/colorBlackBackground"
+                android:text="@string/goals_difference" />
+
+            <TextView
+                android:id="@+id/points"
+                style="@style/TextViewItemTable"
+                android:background="@color/colorBlackBackground"
+                android:text="@string/points" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.sk4atg89.alexander.soccer.domain.common.model.StandingEntity" />
+
+        <variable
+            name="event"
+            type="com.sk4atg89.alexander.soccer.presentation.table.table.LeagueTableContract.EventListener" />
+
+        <variable
+            name="position"
+            type="Integer" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:onClick="@{() -> event.openClub(item.id)}"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/position"
+            style="@style/TextViewItemTable"
+            android:text="@{String.valueOf(item.position)}"
+            bind:position="@{position}"
+            tools:text="1" />
+
+        <TextView
+            android:id="@+id/teamName"
+            style="@style/TextViewItemTable"
+            android:layout_toEndOf="@id/position"
+            android:layout_toLeftOf="@id/llTableContainer"
+            android:layout_toRightOf="@id/position"
+            android:layout_toStartOf="@id/llTableContainer"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="@{item.teamName}"
+            bind:position="@{position}"
+            tools:text="Pro Vercelli" />
+
+
+        <LinearLayout
+            android:id="@+id/llTableContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/playedGames"
+                style="@style/TextViewItemTable"
+                android:text="@{String.valueOf(item.playedGames)}"
+                bind:position="@{position}"
+                tools:text="22" />
+
+            <TextView
+                android:id="@+id/wins"
+                style="@style/TextViewItemTable"
+                android:text="@{String.valueOf(item.wins)}"
+                bind:position="@{position}"
+                tools:text="4" />
+
+            <TextView
+                android:id="@+id/draws"
+                style="@style/TextViewItemTable"
+                android:text="@{String.valueOf(item.draws)}"
+                bind:position="@{position}"
+                tools:text="6" />
+
+            <TextView
+                android:id="@+id/losses"
+                style="@style/TextViewItemTable"
+                android:text="@{String.valueOf(item.losses)}"
+                bind:position="@{position}"
+                tools:text="12" />
+
+            <TextView
+                android:id="@+id/goals"
+                style="@style/TextViewItemTable"
+                android:text="@{String.valueOf(item.goals)}"
+                bind:position="@{position}"
+                tools:text="26" />
+
+            <TextView
+                android:id="@+id/goalsAgainst"
+                style="@style/TextViewItemTable"
+                android:text="@{String.valueOf(item.goalsAgainst)}"
+                bind:position="@{position}"
+                tools:text="41" />
+
+            <TextView
+                android:id="@+id/goalDifference"
+                style="@style/TextViewItemTable"
+                android:text="@{String.valueOf(item.goalDifference)}"
+                bind:position="@{position}"
+                tools:text="-15" />
+
+            <TextView
+                android:id="@+id/points"
+                style="@style/TextViewItemTable"
+                android:text="@{String.valueOf(item.points)}"
+                bind:position="@{position}"
+                tools:text="18" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>

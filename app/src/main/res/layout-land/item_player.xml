@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.sk4atg89.alexander.soccer.domain.common.model.PlayerEntity" />
+
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBlackBackground">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cImageContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/season_margin"
+            card_view:cardCornerRadius="@dimen/season_item_radius">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorGrayBackground"
+                android:gravity="end"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    style="@style/TextViewMain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    bind:formatText="@{@string/playerName}"
+                    bind:value="@{item.name}"
+                    tools:text="name - Odsonne Edouard" />
+
+                <TextView
+                    style="@style/TextViewMain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    bind:formatText="@{@string/playerPosition}"
+                    bind:value="@{item.position}"
+                    tools:text="position - Centre-Forward" />
+
+                <TextView
+                    style="@style/TextViewMain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    bind:formatText="@{@string/jerseyNumber}"
+                    bind:value="@{String.valueOf(item.jerseyNumber)}"
+                    tools:text="jerseyNumber - 22" />
+
+                <TextView
+                    style="@style/TextViewMain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    bind:formatText="@{@string/dateOfBirth}"
+                    bind:value="@{item.dateOfBirth}"
+                    tools:text="dateOfBirth - 1998-01-16" />
+
+                <TextView
+                    style="@style/TextViewMain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    bind:formatText="@{@string/nationality}"
+                    bind:value="@{item.nationality}"
+                    tools:text="nationality - France" />
+
+                <TextView
+                    style="@style/TextViewMain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    bind:formatText="@{@string/contractUntil}"
+                    bind:value="@{item.contractUntil}"
+                    tools:text="contractUntil - 2018-06-30" />
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+
+    </FrameLayout>
+
+</layout>

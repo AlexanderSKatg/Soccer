@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <data>
+
+        <variable
+            name="vm"
+            type="com.sk4atg89.alexander.soccer.presentation.team.team.TeamViewModel" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBlackBackground">
+
+        <ImageView
+            android:id="@+id/ivTeam"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bPlayers"
+            android:contentDescription="@null"
+            bind:image="@{vm.imageUrl}" />
+
+        <TextView
+            android:id="@+id/tvTableTitle"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_above="@+id/bPlayers"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:text="@{vm.titleName}"
+            android:textColor="@color/colorWhiteText"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:text="Celtic FC" />
+
+        <Button
+            android:id="@+id/bPlayers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:onClick="@{vm.openDetails}"
+            android:text="@string/players_button"
+            android:textAllCaps="false" />
+
+    </RelativeLayout>
+
+
+</layout>

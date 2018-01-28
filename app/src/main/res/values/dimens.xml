@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Season Item -->
+    <dimen name="season_margin">8dp</dimen>
+    <dimen name="season_padding">8dp</dimen>
+    <dimen name="season_item_radius">10dp</dimen>
+    <dimen name="season_title_text_size">18sp</dimen>
+
+    <!-- Table Item -->
+    <dimen name="table_item_min_width">30dp</dimen>
+    <dimen name="table_item_min_height">48dp</dimen>
+</resources>

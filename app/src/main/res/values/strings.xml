@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Soccer</string>
+    <string name="league">League : %1$s</string>
+    <string name="year">Year : %1$s</string>
+    <string name="currentMatchday">Current Match Day : %1$s</string>
+    <string name="numberOfMatchdays">Number Of Match Days : %1$s</string>
+    <string name="numberOfTeams">Number Of Teams : %1$s</string>
+    <string name="numberOfGames">Number Of Games : %1$s</string>
+    <string name="lastUpdated">Last Updated : %1$s</string>
+
+    <string name="team_position">#</string>
+    <string name="team_name">Team Name</string>
+    <string name="played_matches">P</string>
+    <string name="win_matches">W</string>
+    <string name="draw_matches">D</string>
+    <string name="lose_matches">L</string>
+    <string name="goals_in_matches">F</string>
+    <string name="goals_against">A</string>
+    <string name="goals_difference">GD</string>
+    <string name="points">Pts</string>
+
+    <string name="players_button">Players</string>
+    <string name="details">Details</string>
+    <string name="refresh">Refresh</string>
+
+
+    <string name="playerName">Name : %1$s</string>
+    <string name="playerPosition">Position : %1$s</string>
+    <string name="jerseyNumber">Jersey Number : %1$s</string>
+    <string name="dateOfBirth">Date Of Birth : %1$s</string>
+    <string name="nationality">Nationality : %1$s</string>
+    <string name="contractUntil">Contract Until : %1$s</string>
+</resources>
